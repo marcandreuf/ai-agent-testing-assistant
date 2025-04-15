@@ -1,8 +1,10 @@
 # ag25-ai-assistant
 
-This repo is my frok from the [mwinteringham/ag25-ai-assistant](https://github.com/mwinteringham/ag25-ai-assistant). I use this repo to learn and practice experiments about Ai Agents in JAVA. 
+This project offers a hands-on platform to experiment with building AI-assisted test frameworks with AI agents in Java. 
+This project can be extended to implement logic with more AI tools to assist with almost any testing activity.
+Clone it, tweak it, and start mastering modern QA automation today!
 
-## How this demo Ai Agent works:
+## How this Ai Agent works:
 
 <p align="center">
     <img src="docs/seq-diagram.png" alt="Architecture Design Sequence Diagram" width="80%">
