@@ -1,0 +1,21 @@
+name: ${APP}-dev-env
+
+services:
+
+  dev_env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: ${APP}-dev-img
+    container_name: ${APP}-dev-container
+    user: ubuntu
+    env_file:
+      - .env
+    volumes:
+      - ../:/home/ubuntu/workspace
+      - ${HOME}/.m2:/home/ubuntu/.m2
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+

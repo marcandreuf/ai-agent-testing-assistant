@@ -1,0 +1,41 @@
+{
+    "name": "Ai test agent",
+    "dockerComposeFile": "../docker/docker-compose.yml",
+    "service": "dev_env",
+    "workspaceFolder": "/home/ubuntu/workspace",
+    "shutdownAction": "stopCompose",
+    "remoteUser": "ubuntu",
+    "containerUser": "ubuntu",
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "mounts": [
+      "source=${localEnv:HOME}/.gitconfig,target=/home/ubuntu/.gitconfig,type=bind,consistency=cached",
+      "source=${localEnv:HOME}/.ssh/id_ed25519,target=/home/ubuntu/.ssh/id_ed25519,type=bind,consistency=cached",
+      "source=${localEnv:HOME}/.ssh/known_hosts,target=/home/ubuntu/.ssh/known_hosts,type=bind,consistency=cached"
+    ],
+    "customizations": {
+      "vscode": {
+        "settings": {          
+          "extensions.ignoreRecommendations": false, 
+          "terminal.integrated.shell.linux": "/bin/bash"
+        },
+        "extensions": [
+          "vscjava.vscode-java-pack",
+          "github.copilot",
+				  "github.copilot-chat",
+          "redhat.java",
+          "redhat.vscode-yaml",
+          "redhat.vscode-xml"
+          // "ms-azuretools.vscode-docker",
+          // "ms-vscode-remote.remote-containers",
+          // "ms-vscode-remote.remote-ssh",
+          // "ms-vscode-remote.remote-ssh-edit",
+          // "ms-vscode.cpptools",
+          // "ms-vscode.cmake-tools",
+          // "ms-vscode.makefile-tools",
+          // "twxs.cmake"          
+        ]
+      }
+    }
+  }

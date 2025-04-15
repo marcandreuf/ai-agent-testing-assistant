@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set root level to OFF to suppress all other logging -->
+    <root level="OFF">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Only log com.mwtestconsultancy package at DEBUG level -->
+    <logger name="com.mwtestconsultancy" level="DEBUG" additivity="false">
+        <appender-ref ref="CONSOLE" />
+    </logger>
+</configuration>
